@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { getClassNames } from "@/lib/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,7 +17,14 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={inter.className}>{children}</body>
+			<body
+				className={
+					(getClassNames("min-h-screen font-sans antialiased grainy"),
+					inter.className)
+				}
+			>
+				{children}
+			</body>
 		</html>
 	);
 }
