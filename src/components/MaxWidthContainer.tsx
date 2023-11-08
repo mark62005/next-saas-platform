@@ -1,5 +1,5 @@
 import { FC, ReactNode } from "react";
-import { getClassNames } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 type MaxWidthContainerProps = {
 	className?: string;
@@ -12,7 +12,7 @@ const MaxWidthContainer: FC<MaxWidthContainerProps> = ({
 }) => {
 	return (
 		<div
-			className={getClassNames(
+			className={cn(
 				"mx-auto w-full max-w-screen-xl px-2.5 md:px-20",
 				className
 			)}

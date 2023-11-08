@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { getClassNames } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 import Navbar from "@/components/Navbar";
 import Provider from "@/components/Provider";
 
@@ -22,8 +22,7 @@ export default function RootLayout({
 			<Provider>
 				<body
 					className={
-						(getClassNames("min-h-screen font-sans antialiased grainy"),
-						inter.className)
+						(cn("min-h-screen font-sans antialiased grainy"), inter.className)
 					}
 				>
 					<Navbar />
