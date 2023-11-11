@@ -2,6 +2,7 @@
 import { FC, useState } from "react";
 import { Dialog, DialogContent, DialogTrigger } from "./ui/dialog";
 import { Button } from "./ui/button";
+import UploadDropzone from "./UploadDropzone";
 
 const UploadButton: FC = () => {
 	const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,7 +23,9 @@ const UploadButton: FC = () => {
 				<Button>Upload PDF</Button>
 			</DialogTrigger>
 
-			<DialogContent>Example Content</DialogContent>
+			<DialogContent>
+				<UploadDropzone />
+			</DialogContent>
 		</Dialog>
 	);
 };
